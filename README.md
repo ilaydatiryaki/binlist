@@ -2,7 +2,8 @@
 
 ## Usage
 ```javascript
-lookup('XXXXXX').then(function(res){
+var binlist = require('binlist');
+binlist('XXXXXX').then(function(res){
   console.log(res);
   /*
   { bin: 'XXXXXX',
