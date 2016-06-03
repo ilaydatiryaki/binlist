@@ -1,0 +1,30 @@
+{
+  "name": "binlist",
+  "version": "1.0.0",
+  "description": "Node.js wrapper for BIN List by PAYOUT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pthm/binlist.git"
+  },
+  "keywords": [
+    "bin",
+    "binlist",
+    "payout",
+    "bins",
+    "lookup"
+  ],
+  "author": "Patt-tom McDonnell <contact@mcdonnell.pt>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pthm/binlist/issues"
+  },
+  "homepage": "https://github.com/pthm/binlist#readme",
+  "dependencies": {
+    "q": "^1.4.1",
+    "superagent": "^2.0.0"
+  }
+}
