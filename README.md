@@ -1,4 +1,7 @@
 # binlist
+Node.js wrapper for Binlist by PAYOUT
+https://bins.payout.com
+
 
 ## Usage
 ```javascript
