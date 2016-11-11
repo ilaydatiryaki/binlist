@@ -3,18 +3,25 @@ var q = require('q');
 
 var lookup = function(bin){
   var deffered = q.defer();
-  request.get('https://bins.payout.com/api/v1/bins/'+bin).end(function(err, response){
+  request.get('https://binlist.net/json/'+bin).end(function(err, response){
     if(err){
-      if(response){
-        deffered.reject(JSON.parse(response.text));
-      } else {
-        deffered.resolve(JSON.parse(err));
-      }
+      deffered.reject(err);
     } else {
-      deffered.resolve(JSON.parse(response.text));
+      try{
+        var binResponse = JSON.parse(response.text)
+      } catch (e){
+        deffered.reject(e);
+      }
+
+      //Backwards compatibility
+      binResponse.issuer = binResponse.bank;
+      binResponse.type = binResponse.card_type;
+      binResponse.is_prepaid = false;
+
+      deffered.resolve(binResponse);
     }
-  })
+  });
   return deffered.promise;
-}
+};
 
 module.exports = lookup;
