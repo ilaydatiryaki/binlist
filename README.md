@@ -1,6 +1,5 @@
 # binlist
-Node.js wrapper for Binlist by PAYOUT
-https://bins.payout.com
+Node.js wrapper for http://www.binlist.net
 
 
 ## Usage
